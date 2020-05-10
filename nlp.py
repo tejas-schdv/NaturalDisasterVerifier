@@ -6,9 +6,9 @@ train_df = pd.read_csv("data/train.csv")
 test_df = pd.read_csv("data/test.csv")
 
 #print(train_df.shape)
-#
-#print(train_df[train_df["target"] == 0]["text"].values[1])
-#print(train_df[train_df["target"] == 1]["text"].values[1])
+
+print(train_df[train_df["target"] == 0]["text"].values[1])
+print(train_df[train_df["target"] == 1]["text"].values[1])
 count_vectorizer = feature_extraction.text.CountVectorizer()
 example_train_vectors = count_vectorizer.fit_transform(train_df["text"][0:5])
 
